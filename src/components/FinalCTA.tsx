@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const FinalCTA = () => {
   return (
     <motion.section 
-      className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-gradient-to-br from-gold via-amber-500 to-yellow-600 z-60"
+      className="relative overflow-hidden py-4 sm:py-6 md:py-8 lg:py-10 z-60"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -13,19 +13,20 @@ export const FinalCTA = () => {
     >
       {/* Enhanced background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Animated grid pattern */}
-        <div className="absolute inset-0 opacity-10">
+        {/* Subtle dot pattern */}
+        <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.02]">
           <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
+            backgroundImage: 'radial-gradient(circle, rgb(59 130 246) 1px, transparent 1px)',
+            backgroundSize: '24px 24px'
           }} />
         </div>
-        {/* Animated gradient orbs */}
+        
+        {/* Elegant gradient orbs */}
         <motion.div 
-          className="absolute -top-20 -right-20 w-40 h-40 xs:w-48 xs:h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 bg-white/10 rounded-full mix-blend-overlay filter blur-3xl"
+          className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-blue-200/30 to-purple-200/30 dark:from-blue-500/15 dark:to-purple-500/15 rounded-full filter blur-[80px]"
           animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
+            scale: [1, 1.1, 1],
+            opacity: [0.4, 0.6, 0.4]
           }}
           transition={{ 
             duration: 8,
@@ -34,136 +35,119 @@ export const FinalCTA = () => {
           }}
         />
         <motion.div 
-          className="absolute -bottom-16 -left-16 w-32 h-32 xs:w-36 xs:h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 bg-amber-300/20 rounded-full mix-blend-overlay filter blur-3xl"
+          className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-to-tr from-cyan-200/30 to-blue-200/30 dark:from-cyan-500/15 dark:to-blue-500/15 rounded-full filter blur-[80px]"
           animate={{ 
-            scale: [1.2, 1, 1.2],
-            opacity: [0.4, 0.2, 0.4]
+            scale: [1.1, 1, 1.1],
+            opacity: [0.5, 0.3, 0.5]
           }}
           transition={{ 
-            duration: 6,
+            duration: 10,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1
           }}
         />
         
-        {/* Enhanced geometric patterns */}
-        <motion.div 
-          className="absolute top-10 left-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 border-2 border-white/20 rounded-lg"
-          animate={{ rotate: [0, 90, 180, 270, 360] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="absolute bottom-16 right-16 w-12 h-12 sm:w-16 sm:h-16 border-2 border-white/20 rounded-full"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-white/30 rounded-full animate-pulse" />
-        <div className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+        {/* Accent gradient line */}
+        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-300/40 dark:via-blue-400/30 to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
         <motion.div 
-          className="max-w-6xl mx-auto text-center"
+          className="max-w-5xl mx-auto text-left"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Enhanced decorative header */}
+          {/* Professional badge */}
           <motion.div 
-            className="flex justify-center mb-6 sm:mb-8 md:mb-10"
-            initial={{ scale: 0.8, opacity: 0 }}
+            className="flex justify-start mb-8 sm:mb-10"
+            initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 120 }}
+            transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="px-5 py-2.5 sm:px-6 sm:py-3 bg-white/25 backdrop-blur-lg rounded-full text-sm sm:text-base font-bold text-white flex items-center gap-2 border border-white/40 shadow-xl hover:scale-105 transition-transform duration-300">
+            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 sm:px-6 sm:py-3 bg-slate-50/90 dark:bg-blue-900/20 backdrop-blur-xl rounded-full border border-slate-200/50 dark:border-blue-600/30 shadow-[0_8px_32px_rgba(71,85,105,0.15)] hover:bg-slate-100/90 dark:hover:bg-blue-800/30 hover:border-slate-300/60 dark:hover:border-blue-500/40 transition-all duration-300">
               <motion.div
                 animate={{ rotate: [0, 360] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
               >
-                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Sparkles className="w-4 h-4 text-slate-600 dark:text-blue-300" />
               </motion.div>
-              <span className="whitespace-nowrap">Start Your Growth Journey Today</span>
-              <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 rounded-full bg-green-400 animate-pulse"></div>
+              <span className="text-sm sm:text-base font-semibold text-slate-700 dark:text-white/95 whitespace-nowrap tracking-wide">Build Your Workforce Today</span>
+              <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_12px_rgba(52,211,153,0.8)]"></div>
             </div>
           </motion.div>
 
-          {/* Main headline with improved hierarchy */}
+          {/* Professional headline */}
           <motion.h2 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-6 sm:mb-8 md:mb-10 text-white leading-[1.1]"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-[1.15] tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <span className="block drop-shadow-lg">Ready to Scale</span>
-            <span className="relative inline-block mt-2 sm:mt-3">
-              <span className="relative z-10 bg-gradient-to-r from-white via-amber-50 to-white bg-clip-text text-transparent drop-shadow-2xl">
-                Smarter?
+            <span className="block text-slate-900 dark:text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.1)] dark:drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">Ready to Build</span>
+            <span className="block mt-2 sm:mt-3">
+              <span className="bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent font-extrabold drop-shadow-[0_2px_24px_rgba(59,130,246,0.3)] dark:drop-shadow-[0_2px_24px_rgba(59,130,246,0.6)]">
+                Your Workforce?
               </span>
-              <motion.span 
-                className="absolute bottom-2 sm:bottom-3 left-0 w-full h-4 sm:h-5 bg-white/30 -z-0 rounded-full blur-sm"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-              />
             </span>
           </motion.h2>
           
-          {/* Subtitle with benefits */}
+          {/* Professional subtitle */}
           <motion.div
-            className="mb-10 sm:mb-12 md:mb-16 max-w-4xl mx-auto"
+            className="mb-8 sm:mb-10 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
           >
-            <p className="text-xl sm:text-2xl md:text-3xl text-white/95 mb-8 leading-relaxed font-semibold drop-shadow-md">
-              Let's build your dedicated team in 48 hours
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-200 mb-8 leading-relaxed font-medium">
+              Get qualified professionals placed in 5 days. You manage, we source.
             </p>
             
-            {/* Benefits list */}
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 mt-8">
+            {/* Refined benefits grid */}
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
               {[
-                "No setup fees",
-                "7-day risk-free trial",
-                "Native English managers",
-                "24/7 support"
+                "Starting €450/month",
+                "Pre-screened talent",
+                "Up to 25% off",
+                "All skill levels"
               ].map((benefit, index) => (
                 <motion.div
                   key={benefit}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-4 sm:px-5 py-2 sm:py-2.5 border border-white/30 hover:bg-white/25 hover:scale-105 transition-all duration-300 shadow-lg"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + index * 0.08, duration: 0.5 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="flex items-center gap-2.5 bg-white/90 dark:bg-blue-900/20 backdrop-blur-xl rounded-xl px-4 sm:px-5 py-2.5 sm:py-3 border border-slate-200/50 dark:border-blue-600/20 hover:bg-slate-50/90 dark:hover:bg-blue-800/30 hover:border-slate-300/60 dark:hover:border-blue-500/40 transition-all duration-300 shadow-[0_4px_16px_rgba(71,85,105,0.1)] dark:shadow-[0_4px_16px_rgba(59,130,246,0.2)]"
                 >
-                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-                  <span className="text-white text-sm sm:text-base font-semibold whitespace-nowrap">{benefit}</span>
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-300 flex-shrink-0" />
+                  <span className="text-slate-700 dark:text-white/95 text-sm sm:text-base font-medium whitespace-nowrap">{benefit}</span>
                 </motion.div>
               ))}
             </div>
           </motion.div>
           
-          {/* Enhanced CTA buttons */}
+          {/* Professional CTA buttons */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center mb-12 sm:mb-16"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-10"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
           >
             <Button 
               size="lg"
               onClick={() => window.location.href = '/book-meeting'}
-              className="bg-white text-gold hover:bg-white/95 hover:scale-[1.08] active:scale-[1.02] group px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg font-extrabold rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] hover:shadow-[0_30px_80px_-15px_rgba(0,0,0,0.5)] transition-all duration-300 border-2 border-white relative overflow-hidden cursor-pointer w-full sm:w-auto"
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 hover:scale-[1.03] active:scale-[0.98] group px-8 sm:px-10 py-5 sm:py-6 text-base sm:text-lg font-bold rounded-xl shadow-[0_8px_32px_rgba(59,130,246,0.3)] hover:shadow-[0_12px_48px_rgba(59,130,246,0.4)] transition-all duration-300 border border-blue-400/50 relative overflow-hidden cursor-pointer w-full sm:w-auto"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/20 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/10 to-gold/0 animate-pulse" />
-              <span className="relative flex items-center gap-3">
-                <span>Book Free Strategy Session</span>
-                <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-2 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+              <span className="relative flex items-center gap-2.5">
+                <span>Get Started Now</span>
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
             </Button>
             
@@ -171,97 +155,44 @@ export const FinalCTA = () => {
               variant="outline"
               size="lg"
               onClick={() => window.open('https://wa.me/YOUR_WHATSAPP_NUMBER', '_blank')}
-              className="bg-white/10 border-3 border-white text-white hover:bg-white hover:text-gold hover:scale-[1.08] active:scale-[1.02] px-6 sm:px-10 py-6 sm:py-8 text-base sm:text-lg font-bold rounded-2xl backdrop-blur-lg transition-all duration-300 group relative overflow-hidden cursor-pointer w-full sm:w-auto shadow-lg hover:shadow-2xl"
+                className="bg-white/90 dark:bg-white/[0.08] border-2 border-slate-300 dark:border-white/30 text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-white/[0.15] hover:border-slate-400 dark:hover:border-white/50 hover:scale-[1.03] active:scale-[0.98] px-8 sm:px-10 py-5 sm:py-6 text-base sm:text-lg font-semibold rounded-xl backdrop-blur-xl transition-all duration-300 group cursor-pointer w-full sm:w-auto shadow-[0_4px_16px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.15)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="relative flex items-center gap-3">
-                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 group-hover:rotate-12 transition-transform duration-300" />
-                <span>Quick WhatsApp Chat</span>
+              <span className="relative flex items-center gap-2.5">
+                <MessageCircle className="h-5 w-5 group-hover:rotate-6 transition-transform duration-300" />
+                <span>Chat With Us</span>
               </span>
             </Button>
           </motion.div>
 
-          {/* Stats Section */}
+          {/* Professional stats section */}
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-4xl mx-auto mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.35 }}
+            transition={{ duration: 0.7, delay: 0.7 }}
           >
             {[
-              { icon: Users, value: "200+", label: "Active Clients" },
-              { icon: TrendingUp, value: "3.5x", label: "Avg. ROI" },
-              { icon: Award, value: "98%", label: "Satisfaction" },
-              { icon: Clock, value: "48h", label: "Fast Start" }
+              { icon: Users, value: "300+", label: "Professionals" },
+              { icon: TrendingUp, value: "25%", label: "Max Discount" },
+              { icon: Award, value: "92%", label: "Success Rate" },
+              { icon: Clock, value: "5 Days", label: "Fast Placement" }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4 + index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white/15 backdrop-blur-lg border border-white/30 rounded-2xl p-4 sm:p-6 hover:bg-white/25 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.75 + index * 0.08, duration: 0.5 }}
+                whileHover={{ y: -4 }}
+                className="bg-white/90 dark:bg-blue-900/20 backdrop-blur-xl border border-slate-200/50 dark:border-blue-600/20 rounded-xl p-4 sm:p-5 hover:bg-slate-50/90 dark:hover:bg-blue-800/30 hover:border-slate-300/60 dark:hover:border-blue-500/40 transition-all duration-300 group shadow-[0_4px_16px_rgba(71,85,105,0.1)] dark:shadow-[0_4px_16px_rgba(59,130,246,0.2)]"
               >
-                <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white mb-2 mx-auto group-hover:scale-110 transition-transform duration-300" />
-                <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-xs sm:text-sm text-white/80">{stat.label}</div>
+                <stat.icon className="w-7 h-7 sm:w-9 sm:h-9 text-slate-600 dark:text-blue-300 mb-3 mx-auto group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-1">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-slate-600 dark:text-white/70 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Enhanced trust indicators */}
-          <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-          >
-            <div className="flex items-center justify-center gap-3 text-white/90 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="p-2 bg-green-400/20 rounded-lg">
-                <Clock className="w-5 h-5 text-green-400 flex-shrink-0" />
-              </div>
-              <div className="text-left">
-                <div className="font-bold text-white text-base">15 min</div>
-                <div className="text-sm text-white/80">Free consultation</div>
-              </div>
-            </div>
-            
-            <div className="flex items-center justify-center gap-3 text-white/90 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="p-2 bg-green-400/20 rounded-lg relative">
-                <div className="w-5 h-5 rounded-full bg-green-400 animate-pulse" />
-                <div className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75" />
-              </div>
-              <div className="text-left">
-                <div className="font-bold text-white text-base">2 hours</div>
-                <div className="text-sm text-white/80">Avg. response time</div>
-              </div>
-            </div>
-            
-            <div className="flex items-center justify-center gap-3 text-white/90 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="p-2 bg-green-400/20 rounded-lg">
-                <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
-              </div>
-              <div className="text-left">
-                <div className="font-bold text-white text-base">No commitment</div>
-                <div className="text-sm text-white/80">Zero pressure</div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Additional reassurance text */}
-          <motion.p 
-            className="mt-8 sm:mt-10 text-white/80 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-medium"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <span className="flex items-center justify-center gap-2 flex-wrap">
-              <CheckCircle2 className="w-4 h-4 text-green-400" />
-              Join 200+ businesses that scaled efficiently with our dedicated virtual assistants
-            </span>
-          </motion.p>
         </motion.div>
       </div>
     </motion.section>

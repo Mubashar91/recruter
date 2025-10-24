@@ -27,7 +27,7 @@ const CaseStudyDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background dark:bg-[#172D64]">
       <Navbar />
       
       <section className="relative pt-20 sm:pt-24 pb-12 sm:pb-16">
@@ -49,12 +49,12 @@ const CaseStudyDetail = () => {
                 {caseStudy.industry}
               </span>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground dark:text-white leading-tight">
                 {caseStudy.title}
               </h1>
 
-              <div className="flex items-center gap-3 text-base text-muted-foreground mb-6">
-                <span className="font-semibold text-foreground">{caseStudy.company}</span>
+              <div className="flex items-center gap-3 text-base text-muted-foreground dark:text-blue-200 mb-6">
+                <span className="font-semibold text-foreground dark:text-white">{caseStudy.company}</span>
                 <span>•</span>
                 <span>{caseStudy.industry}</span>
               </div>
@@ -90,8 +90,8 @@ const CaseStudyDetail = () => {
               <h2 className="text-xl sm:text-2xl font-bold mb-3 text-foreground">
                 The Challenge
               </h2>
-              <div className="bg-card border border-border rounded-lg p-5 sm:p-6">
-                <p className="text-base text-muted-foreground leading-relaxed">
+              <div className="bg-card dark:bg-[#172D64] border border-border dark:border-blue-400/30 rounded-lg p-5 sm:p-6">
+                <p className="text-base text-muted-foreground dark:text-blue-100 leading-relaxed">
                   {caseStudy.challenge}
                 </p>
               </div>
@@ -102,8 +102,8 @@ const CaseStudyDetail = () => {
               <h2 className="text-xl sm:text-2xl font-bold mb-3 text-foreground">
                 The Solution
               </h2>
-              <div className="bg-card border border-border rounded-lg p-5 sm:p-6">
-                <p className="text-base text-muted-foreground leading-relaxed">
+              <div className="bg-card dark:bg-[#172D64] border border-border dark:border-blue-400/30 rounded-lg p-5 sm:p-6">
+                <p className="text-base text-muted-foreground dark:text-blue-100 leading-relaxed">
                   {caseStudy.solution}
                 </p>
               </div>
@@ -118,11 +118,11 @@ const CaseStudyDetail = () => {
                 {caseStudy.results.map((result, index) => (
                   <div
                     key={index}
-                    className="bg-card border border-border rounded-lg p-5"
+                    className="bg-card dark:bg-[#172D64] border border-border dark:border-blue-400/30 rounded-lg p-5"
                   >
                     <div className="text-3xl font-bold text-gold mb-2">{result.value}</div>
-                    <div className="text-base font-semibold text-foreground mb-1">{result.metric}</div>
-                    <div className="text-sm text-muted-foreground">{result.description}</div>
+                    <div className="text-base font-semibold text-foreground dark:text-white mb-1">{result.metric}</div>
+                    <div className="text-sm text-muted-foreground dark:text-blue-200">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -212,7 +212,7 @@ const CaseStudyDetail = () => {
                   <div
                     key={relatedStudy.id}
                     onClick={() => navigate(`/case-study/${relatedStudy.id}`)}
-                    className="group cursor-pointer bg-card border border-border rounded-lg overflow-hidden hover:border-gold/50 hover:shadow-md transition-all duration-300"
+                    className="group cursor-pointer bg-card dark:bg-[#172D64] border border-border dark:border-blue-400/30 rounded-lg overflow-hidden hover:border-gold/50 hover:shadow-md transition-all duration-300"
                   >
                     <img
                       src={relatedStudy.image}
@@ -221,10 +221,10 @@ const CaseStudyDetail = () => {
                     />
                     <div className="p-4">
                       <span className="text-xs text-gold font-semibold">{relatedStudy.industry}</span>
-                      <h4 className="text-base font-bold mt-2 mb-1 text-foreground group-hover:text-gold transition-colors line-clamp-2">
+                      <h4 className="text-base font-bold mt-2 mb-1 text-foreground dark:text-white group-hover:text-gold transition-colors line-clamp-2">
                         {relatedStudy.company}
                       </h4>
-                      <p className="text-sm text-muted-foreground line-clamp-2">{relatedStudy.challenge}</p>
+                      <p className="text-sm text-muted-foreground dark:text-blue-200 line-clamp-2">{relatedStudy.challenge}</p>
                       <div className="mt-2 text-sm text-gold font-semibold flex items-center gap-1">
                         View Case Study
                         <ArrowLeft className="w-4 h-4 rotate-180" />
